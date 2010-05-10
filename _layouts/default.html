@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]>
+      <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    <link rel="stylesheet" href="css/site.css" type="text/css" media="all">
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {{ content }}
+    <div id="main" class="container">
+      <div id="header" class="span-24 last">
+        <h1 id="title">
+          <a href="/">
+            jason
+            <span>::</span>
+            the
+            <span>::</span>
+            norris
+          </a>
+        </h1>
+      </div>
+      
+      {{ content }}
+
+    </div>
+ 
   </body>
 </html>

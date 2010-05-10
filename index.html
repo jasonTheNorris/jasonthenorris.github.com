@@ -1,7 +1,22 @@
 ---
 layout: default
-title: jason:the:norris
----
-<h2>
-  HI!
-</h2>  
+title: jason::the::norris
+---   
+{% for post in site.posts limit:5 %}
+<div class="container post">
+  <div class="span-5 append-1 post_date">
+    <h1>{{post.date | date:"%b %d"}}</h1>
+    <h2>{{post.date | date:"%Y"}}</h2>
+  </div>
+
+  <div class="span-14 post_body">         
+    <h1>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    {{ post.content }}       
+  </div>
+
+  <div class="span-4 last">
+  </div>
+</div>
+ {% endfor %}
